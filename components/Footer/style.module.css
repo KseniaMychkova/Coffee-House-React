@@ -1,0 +1,157 @@
+.footer {
+    background-color: #665F55;
+    color: white;
+    padding: 60px 20px;
+    display: flex;
+    gap: 100px;
+    justify-content: flex-start;
+    max-width: 1360px;
+    border-radius: 40px;
+    padding: 100px;
+    align-items: center;
+}
+
+.networks {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 530px;
+    gap: 40px;
+
+}
+
+.networks h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 60px;
+    line-height: 125%;
+
+}
+
+.networks h2 span {
+    color: #C7A17A;
+}
+
+.links {
+
+    display: flex;
+    gap: 12px;
+}
+
+.socialLinks {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #C1B6AD;
+    border-radius: 100px;
+    padding: 18px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.socialLinks:first-child::before {
+    content: "";
+    display: block;
+    background-image: url('./assets/twitter.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    /* position: absolute;
+    top: 18px;
+    left: 18px; */
+
+}
+
+.socialLinks:nth-child(2)::before {
+    content: "";
+    display: block;
+    background-image: url('./assets/instagram.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.socialLinks:last-child::before {
+    content: "";
+    display: block;
+    background-image: url('./assets/facebook.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.socialLinks:hover {
+    background-color: #E1D4C9;
+
+    &:first-child::before {
+        content: "";
+        display: block;
+        background-image: url(./assets/twitter-dark.svg);
+    }
+
+    &:nth-child(2)::before {
+        content: "";
+        display: block;
+        background-image: url(./assets/instagram-dark.svg);
+    }
+
+    &:last-child::before {
+        content: "";
+        display: block;
+        background-image: url(./assets/facebook-dark.svg);
+
+
+    }
+}
+
+.contacts {
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #E1D4C9;
+
+}
+
+.contacts h4 {
+    font-size: 24px;
+}
+
+.contactsContainer {
+    display: flex;flex-direction: column;
+    gap: 20px;
+}
+.contactsContainer div {
+    display: flex;
+    gap: 4px;
+}
+
+.contacts>div>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pinalt,
+.phone,
+.clock {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pinalt {
+    background-image: url('./assets/pin-alt.svg');
+}
+
+.phone {
+    background-image: url('./assets/phone.svg');
+}
+
+.clock {
+    background-image: url('./assets/clock.svg');
+}
