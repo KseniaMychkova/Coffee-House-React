@@ -1,0 +1,43 @@
+.preview{
+    background-image: url(./assets/img-hero.jpg);
+    width: 100%;
+    border-radius: 40px;
+    background-position: center;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.preview h1 {
+    font-size: 72px;
+    line-height: 75.6px;
+    color: #E1D4C9;
+    max-width: 530px;
+}
+
+.preview p {
+    font-weight: 400;
+    max-width: 530px;
+    color: #E1D4C9;
+}
+
+.preview div button {
+    display: block;
+    width: 200px;
+    height: 64px;
+    background-color: #E1D4C9;
+    border-radius: 100px;
+    color: #403F3D;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+}
+
+.preview div button:hover::after {
+    content: url(./img/coffee-cup.svg);
+    font-size: 20px;
+    vertical-align: middle;
+}

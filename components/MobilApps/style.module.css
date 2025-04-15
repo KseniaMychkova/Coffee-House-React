@@ -1,0 +1,78 @@
+.mobilApps {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.links p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 630px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 200px;
+    height: 64px;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    padding: 12px 20px 12px 20px;
+}
+
+.btnContainer:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    &.iconApp{
+        background-image: url(./assets/icon-app-light.svg);
+    }
+    &.iconGoogle {
+        background-image: url(./assets/icon-google-light.svg);
+    }
+}
+
+.iconApp,  .iconGoogle{
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+}
+
+.btnText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.btnContainer .btnText:first-of-type {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+.iconApp {
+    background-image: url(./assets/icon-app.svg);
+    background-repeat: no-repeat;
+}
+
+.iconGoogle {
+    background-image: url(./assets/icon-google.svg);
+    background-repeat: no-repeat;
+}
+
+.mobil-apps .mobile-screen {
+    max-width: 630px;
+}

@@ -15,4 +15,20 @@ body {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+span {
+  color: #B0907A;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 75px;
 }
