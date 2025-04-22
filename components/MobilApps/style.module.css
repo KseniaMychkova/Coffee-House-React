@@ -3,6 +3,11 @@
     gap: 100px;
     align-items: center;
 }
+@media screen and (max-width: 1180px) {
+    .mobilApps{
+        flex-direction: column;
+    }   
+}
 
 .links {
     display: flex;

@@ -232,8 +232,7 @@ const MenuCoffee = () => {
                     <div className={style.background} onClick={() => setIsModalOpen(false)} />
                     <div className={style.modal}>
                         <div className={style.modalImg}>
-                        <img src={getImageUrl(selectedProduct.img)} alt={selectedProduct.h3} />
-                            {/* <img src={selectedProduct.img} alt={selectedProduct.h3} /> */}
+                            <img src={getImageUrl(selectedProduct.img)} alt={selectedProduct.h3} />
                         </div>
 
                         <div className={style.modalText}>
