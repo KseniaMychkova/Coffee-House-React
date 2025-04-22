@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import style from './style.module.css'
 import Logo from '../../src/assets/image/logo.svg'
 
-function Header () {
+function Header() {
   const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
@@ -16,7 +16,9 @@ function Header () {
   return (
     <header className={style.header}>
       <div className={style.logo}>
-        <img src={Logo} alt="Coffee House Logo" />
+        <Link to={'/'}>
+          <img src={Logo} alt="Coffee House Logo" />
+        </Link>
       </div>
       <nav className={style.nav}>
         <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>

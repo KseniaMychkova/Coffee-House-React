@@ -1,0 +1,72 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider h2 {
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.coffeeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.sliderTitle {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sliderDescription {
+    max-width: 480px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.sliderPrice {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+}
+
+.borderArrow {
+    border: 1px solid #665F55;
+    border-radius: 50%;
+    padding: 24px;
+}
+.borderArrow:hover {
+    background-color: #665F55;
+    & .leftArrow {
+        background-image: url(./assets/arrow-left-light.svg);
+    }
+    & .rightArrow {
+        background-image: url(./assets/arrow-right-light.svg);
+    }
+}
+
+.leftArrow {
+    background-image: url(./assets/arrow-left.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.rightArrow {
+    background-image: url(./assets/arrow-right.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
