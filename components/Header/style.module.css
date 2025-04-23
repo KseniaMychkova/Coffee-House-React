@@ -1,45 +1,122 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #E1D4C9;
+}
+
+.headerBurger {
+  display: none
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav p {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav p:hover {
+  color: #C7A17A;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navigation p {
+  margin: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('./assets/coffee-cup-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.burgerMenu {
+display: flex;
+
+}
+
+.burgerBtnClose {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.iconOpen {
+  background-image: url(./assets/button-icon-burger.svg);
+  width: 44px;
+  height: 44px;
+}
+
+.iconClose {
+  background-image: url(./assets/button-icon-burger-close.svg);
+  width: 44px;
+  height: 44px;
+}
+
+.dropDownMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  background-color: #E1D4C9;
+  position: fixed; /* вместо absolute */
+  top: 60;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw; /* вся ширина viewport */
+  height: 100vh; /* вся высота viewport */
+  z-index: 1000; /* гарантированно поверх других элементов */
+  padding-top: 100px; /* отступ для лого и кнопки закрытия */
+  overflow-y: auto; /* если контент не помещается */
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .headerBurger {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #E1D4C9;
   }
-  
-  .logo img {
+  .nav {
+    flex-direction: column;
+   align-items: center;
+    gap: 60px;
+    font-size: 32px;
+  }
+  .navigation p {
+    font-size: 32px;
+    align-self: flex-end;
+  }
+  .icon {
+    width: 40px;
     height: 40px;
   }
-  
-  .nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav p {
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .nav p:hover {
-    color: #C7A17A;
-  }
-  
   .navigation {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
+    gap: 16px;
   }
-  
-  .navigation p {
-    margin: 0;
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
-    background-image: url('./assets/coffee-cup-icon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  } 
+}

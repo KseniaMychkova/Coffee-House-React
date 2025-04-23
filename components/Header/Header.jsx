@@ -1,10 +1,13 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useState } from 'react';
 import style from './style.module.css'
 import Logo from '../../src/assets/image/logo.svg'
 
+
 function Header() {
   const navigate = useNavigate();
+  const [flag, setFlag] = useState(false)
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -14,23 +17,55 @@ function Header() {
   };
 
   return (
-    <header className={style.header}>
-      <div className={style.logo}>
-        <Link to={'/'}>
-          <img src={Logo} alt="Coffee House Logo" />
-        </Link>
+    <>
+      <header className={style.header}>
+        <div className={style.logo}>
+          <Link to={'/'}>
+            <img src={Logo} alt="Coffee House Logo" />
+          </Link>
+        </div>
+        <nav className={style.nav}>
+          <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>
+          <p onClick={() => scrollToSection('about_us')}>About</p>
+          <p onClick={() => scrollToSection('our_apps')}>Mobile app</p>
+          <p onClick={() => scrollToSection('our_contacts')}>Contact us</p>
+        </nav>
+        <div className={style.navigation} onClick={() => navigate('/menu')}>
+          <p>Menu</p>
+          <div className={style.icon}></div>
+        </div>
+      </header>
+
+      <div className={style.headerBurger}>
+        <div className={style.logo}>
+          <Link to={'/'}>
+            <img src={Logo} alt="Coffee House Logo" />
+          </Link>
+        </div>
+        <div className={style.burgerMenu}>
+          {!flag ?
+            <div className={style.burgerBtnOpen}>
+              <div className={style.iconOpen} onClick={() => setFlag(!flag)}></div>
+            </div>
+            :
+            <div className={style.burgerBtnClose} onClick={() => setFlag(!flag)}>
+              <div className={style.iconClose}></div>
+              <div className={style.dropDownMenu}>
+                <nav className={style.nav}>
+                  <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>
+                  <p onClick={() => scrollToSection('about_us')}>About</p>
+                  <p onClick={() => scrollToSection('our_apps')}>Mobile app</p>
+                  <p onClick={() => scrollToSection('our_contacts')}>Contact us</p>
+                </nav>
+                <div className={style.navigation} onClick={() => navigate('/menu')}>
+                  <p>Menu</p>
+                  <div className={style.icon}></div>
+                </div>
+              </div>
+            </div>}
+        </div>
       </div>
-      <nav className={style.nav}>
-        <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>
-        <p onClick={() => scrollToSection('about_us')}>About</p>
-        <p onClick={() => scrollToSection('our_apps')}>Mobile app</p>
-        <p onClick={() => scrollToSection('our_contacts')}>Contact us</p>
-      </nav>
-      <div className={style.navigation} onClick={() => navigate('/menu')}>
-        <p>Menu</p>
-        <div className={style.icon}></div>
-      </div>
-    </header>
+    </>
   );
 };
 
