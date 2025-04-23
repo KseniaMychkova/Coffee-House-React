@@ -25,10 +25,26 @@ function Header() {
           </Link>
         </div>
         <nav className={style.nav}>
-          <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>
-          <p onClick={() => scrollToSection('about_us')}>About</p>
-          <p onClick={() => scrollToSection('our_apps')}>Mobile app</p>
-          <p onClick={() => scrollToSection('our_contacts')}>Contact us</p>
+          <p onClick={() => {
+            navigate('/')
+            setTimeout(() => scrollToSection('our_favorite_coffee'), 100)
+          }
+          }>Favorite coffee</p>
+          <p onClick={() => {
+            navigate('/')
+            setTimeout(() => scrollToSection('about_us'), 100)
+          }
+          }>About</p>
+          <p onClick={() => {
+            navigate('/')
+            setTimeout(() => scrollToSection('our_apps'), 100)
+          }
+          }>Mobile app</p>
+          <p onClick={() => {
+            navigate('/')
+            setTimeout(() => scrollToSection('our_contacts'), 100)
+          }
+          }>Contact us</p>
         </nav>
         <div className={style.navigation} onClick={() => navigate('/menu')}>
           <p>Menu</p>
@@ -52,10 +68,26 @@ function Header() {
               <div className={style.iconClose}></div>
               <div className={style.dropDownMenu}>
                 <nav className={style.nav}>
-                  <p onClick={() => scrollToSection('our_favorite_coffee')}>Favorite coffee</p>
-                  <p onClick={() => scrollToSection('about_us')}>About</p>
-                  <p onClick={() => scrollToSection('our_apps')}>Mobile app</p>
-                  <p onClick={() => scrollToSection('our_contacts')}>Contact us</p>
+                  <p onClick={() => {
+                    navigate('/')
+                    setTimeout(() => scrollToSection('our_favorite_coffee'), 100)
+                  }
+                  }>Favorite coffee</p>
+                  <p onClick={() => {
+                    navigate('/')
+                    setTimeout(() => scrollToSection('about_us'), 100)
+                  }
+                  }>About</p>
+                  <p onClick={() => {
+                    navigate('/')
+                    setTimeout(() => scrollToSection('our_apps'), 100)
+                  }
+                  }>Mobile app</p>
+                  <p onClick={() => {
+                    navigate('/')
+                    setTimeout(() => scrollToSection('our_contacts'), 100)
+                  }
+                  }>Contact us</p>
                 </nav>
                 <div className={style.navigation} onClick={() => navigate('/menu')}>
                   <p>Menu</p>
